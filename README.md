@@ -1,1 +1,5 @@
-# 2024_wt_prj_cernek
+# Výživová kalkulačka
+
+*Autor: Tobiáš Černek tobias.cernek.s@gyarab.cz*
+
+## Odborný článek
