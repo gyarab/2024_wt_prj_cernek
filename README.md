@@ -11,3 +11,5 @@ Každá potravina má obrázek a počty bílkovin, sacharidů, tuků, vlákniny 
 Při přidání potraviny do celkového součtu se automaticky přepočítají hodnoty na 100g na hodnoty pro vybranou hmotnost/objem.
 
 ## Wireframes
+
+![alt text](IMG_20250103_235734105~2.jpg "Title")
