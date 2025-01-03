@@ -12,4 +12,4 @@ Při přidání potraviny do celkového součtu se automaticky přepočítají h
 
 ## Wireframes
 
-![alt text](IMG_20250103_235734105~2.jpg "Title")
+![wireframes](vyzivova_kalkulacka_wireframes.jpg)
