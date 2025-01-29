@@ -16,4 +16,4 @@ Při přidání potraviny do celkového součtu se automaticky přepočítají h
 
 ## DB Schéma
 
-![db_schema]()
+![db_schema](db_schema.jpg)
