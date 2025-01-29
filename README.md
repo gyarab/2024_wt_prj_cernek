@@ -13,3 +13,7 @@ Při přidání potraviny do celkového součtu se automaticky přepočítají h
 ## Wireframes
 
 ![wireframes](vyzivova_kalkulacka_wireframes.jpg)
+
+## DB Schéma
+
+![db_schema]()
