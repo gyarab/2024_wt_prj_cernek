@@ -49,7 +49,7 @@ while True:
 if konverze == 1:
     vysledek = castka * kurz
 elif konverze == 2:
-    vysledek = castka / kurzex
+    vysledek = castka / kurz
 else:
     print("Neco se pokazilo")
 
