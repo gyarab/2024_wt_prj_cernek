@@ -21,7 +21,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',TemplateView.as_view(template_name='main/homepage.html')),
-    path('seznam-potravin',TemplateView.as_view(template_name='main/seznam_potravin.html')),
+    path('seznam-potravin',TemplateView.as_view(template_name='main/seznam-potravin.html')),
     path('potraviny-v-souctu',TemplateView.as_view(template_name='main/seznam-potravin-v-souctu.html')),
-    path('kalkulacka-idealnich-kalorii',TemplateView.as_view(template_name='main/idealni-kalorie-kalkulacka.html'))
+    path('kalkulacka-idealnich-kalorii',TemplateView.as_view(template_name='main/idealni-kalorie-kalkulacka.html')),
+    path('test',TemplateView.as_view(template_name='main/detail-jidla.html')),
 ]

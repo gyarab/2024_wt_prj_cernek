@@ -1,0 +1,42 @@
+{% extends 'main/potravina-navbar.html' %}
+
+{% block jmeno-potraviny %}
+Jmeno
+{% endblock %}
+
+{% block content %}
+    <div class="row text-center align-items-center">
+        <div class="col-md-4 p-0">
+            <img src="https://placehold.co/400" class="p-4 w-100" alt="orazek">
+        </div>
+
+        <div class="col-md-8 p-0">
+            <div class="list-group p-4">
+                <div class="list-group-item">
+                    <h1>Údaje na 100g</h1>
+                </div>
+                <div class="list-group-item">
+                    <h1 class="m-1 d-flex justify-content-evenly" >
+                        <div class="fs-3" style="flex: 1 1 0;">x kcal</div>
+                        <div class="vr"></div>
+                        <div class="fs-3" style="flex: 1 1 0;">x kJ</div>
+                    </h1>
+                </div>
+                <div class="list-group-item">
+                    <h1 class="m-1 d-flex justify-content-evenly" style="flex: 1 1 0;">
+                        <div class="fs-3" style="flex: 1 1 0;">xg Bílkovin</div>
+                        <div class="vr"></div>
+                        <div class="fs-3" style="flex: 1 1 0;">xg Sacharidů</div>
+                    </h1>
+                </div>
+                <div class="list-group-item">
+                    <h1 class="m-1 d-flex justify-content-evenly" style="flex: 1 1 0;">
+                        <div class="fs-3" style="flex: 1 1 0;">xg Tuků</div>
+                        <div class="vr"></div>
+                        <div class="fs-3" style="flex: 1 1 0;">xg Vlákniny</div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
