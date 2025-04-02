@@ -1,0 +1,67 @@
+[
+{
+  "model": "main.food",
+  "pk": 2,
+  "fields": {
+    "name": "Vejce Slepièí",
+    "photo": "images/vejce.jpg",
+    "kcalPer100g": 151,
+    "proteinPer100g": 12.38,
+    "carbsPer100g": 0.94,
+    "fatPer100g": 10.87,
+    "fiberPer100g": 0.0
+  }
+},
+{
+  "model": "main.food",
+  "pk": 3,
+  "fields": {
+    "name": "Kuøecí Prsa Syrová",
+    "photo": "images/kureci_prso.jpg",
+    "kcalPer100g": 106,
+    "proteinPer100g": 23.1,
+    "carbsPer100g": 0.0,
+    "fatPer100g": 1.5,
+    "fiberPer100g": 0.0
+  }
+},
+{
+  "model": "main.food",
+  "pk": 4,
+  "fields": {
+    "name": "Rýže Bílá Vaøená",
+    "photo": "images/ryze.jpg",
+    "kcalPer100g": 125,
+    "proteinPer100g": 2.69,
+    "carbsPer100g": 28.0,
+    "fatPer100g": 0.28,
+    "fiberPer100g": 0.4
+  }
+},
+{
+  "model": "main.food",
+  "pk": 5,
+  "fields": {
+    "name": "Chleba kmínový",
+    "photo": "images/chleba.jpg",
+    "kcalPer100g": 244,
+    "proteinPer100g": 8.0,
+    "carbsPer100g": 45.0,
+    "fatPer100g": 1.1,
+    "fiberPer100g": 4.0
+  }
+},
+{
+  "model": "main.food",
+  "pk": 6,
+  "fields": {
+    "name": "Máslo",
+    "photo": "images/maslo.jpg",
+    "kcalPer100g": 748,
+    "proteinPer100g": 0.7,
+    "carbsPer100g": 0.52,
+    "fatPer100g": 82.58,
+    "fiberPer100g": 0.0
+  }
+}
+]

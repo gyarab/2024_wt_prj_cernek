@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',TemplateView.as_view(template_name='main/homepage.html')),
-    path('seznam-potravin',TemplateView.as_view(template_name='main/seznam-potravin.html')),
+    path('seznam-potravin', views.foods),
     path('potraviny-v-souctu',TemplateView.as_view(template_name='main/seznam-potravin-v-souctu.html')),
     path('kalkulacka-dennich-kalorii',TemplateView.as_view(template_name='main/idealni-kalorie-kalkulacka.html')),
     path('test',TemplateView.as_view(template_name='main/detail-potraviny.html')),

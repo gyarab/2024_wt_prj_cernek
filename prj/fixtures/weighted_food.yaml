@@ -1,0 +1,26 @@
+[
+{
+  "model": "main.weightedfood",
+  "pk": 1,
+  "fields": {
+    "weight": 250,
+    "parentFood": 3
+  }
+},
+{
+  "model": "main.weightedfood",
+  "pk": 2,
+  "fields": {
+    "weight": 200,
+    "parentFood": 2
+  }
+},
+{
+  "model": "main.weightedfood",
+  "pk": 3,
+  "fields": {
+    "weight": 100,
+    "parentFood": 5
+  }
+}
+]

@@ -1,0 +1,16 @@
+[
+{
+  "model": "main.meal",
+  "pk": 1,
+  "fields": {
+    "name": "Chleba s vejcem"
+  }
+},
+{
+  "model": "main.meal",
+  "pk": 2,
+  "fields": {
+    "name": "Kuøe s rýží"
+  }
+}
+]
