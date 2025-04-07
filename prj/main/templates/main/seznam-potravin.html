@@ -6,22 +6,22 @@ Seznam Potravin
 
 {% block content %}
     {% for food in foods %}
-    <div class="card my-3 shadow-lg" style="width: 95vw;">
-        <div class="card-body p-2 d-flex align-items-center justify-content-start">
-            <img src="https://placehold.co/400" alt="Obrazek jidla" style="height: 8vw; min-height: 50px; max-height: 80px;" class="me-3 rounded-2">
-            <a href="test" class="m-0 h4 flex-grow-1 text-start" style="text-decoration: none; font-size: 3vmin;">{{ food.name }}</a>
-            <div class="d-none d-md-flex flex-column text-center mx-3" style="font-size: 1.5vmin;">
-                <p class="m-0">{{ food.kcalPer100g }} kcal</p>
-                <p class="m-0">/</p>
-                <p class="m-0">100g</p>
-            </div>
+        <div class="card my-3 shadow-lg" style="width: 95vw;">
+            <div class="card-body p-2 d-flex align-items-center justify-content-start">
+                <img src="{{ food.photo.url }}" alt="Obrazek jidla" style="height: 8vw; min-height: 50px; max-height: 80px;" class="me-3 rounded-2">
+                <a href="test" class="m-0 h4 flex-grow-1 text-start" style="text-decoration: none; font-size: 3vmin;">{{ food.name }}</a>
+                <div class="d-none d-md-flex flex-column text-center mx-3" style="font-size: 1.5vmin;">
+                    <p class="m-0">{{ food.kcalPer100g }} kcal</p>
+                    <p class="m-0">/</p>
+                    <p class="m-0">100g</p>
+                </div>
             
-            <a href="pridani-potraviny" class="btn btn-success d-flex justify-content-center align-items-center mx-1 shadow" role="button" style="height: 6vw;width: 6vw; min-height: 40px; min-width: 40px; max-height: 64px; max-width: 64px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                </svg>
-            </a>
+                <a href="pridani-potraviny" class="btn btn-success d-flex justify-content-center align-items-center mx-1 shadow" role="button" style="height: 6vw;width: 6vw; min-height: 40px; min-width: 40px; max-height: 64px; max-width: 64px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-    </div>
     {% endfor %}
 {% endblock %}

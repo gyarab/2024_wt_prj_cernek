@@ -1,0 +1,18 @@
+[
+{
+  "model": "main.countedmeal",
+  "pk": 1,
+  "fields": {
+    "parentMeal": 2,
+    "count": 3
+  }
+},
+{
+  "model": "main.countedmeal",
+  "pk": 2,
+  "fields": {
+    "parentMeal": 1,
+    "count": 2
+  }
+}
+]

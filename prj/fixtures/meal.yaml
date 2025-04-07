@@ -3,14 +3,16 @@
   "model": "main.meal",
   "pk": 1,
   "fields": {
-    "name": "Chleba s vejcem"
+    "name": "Chleba s vejcem",
+    "photo": "images/chleba_s_vejcem.jpg"
   }
 },
 {
   "model": "main.meal",
   "pk": 2,
   "fields": {
-    "name": "Kuøe s rýží"
+    "name": "Kuøe s rýží",
+    "photo": "images/kure_s_ryzi.jpg"
   }
 }
 ]

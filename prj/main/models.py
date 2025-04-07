@@ -36,6 +36,7 @@ class WeightedFood(models.Model):
     
 class Meal(models.Model):
     name = models.CharField(max_length=400)
+    photo = models.ImageField(upload_to="images/", null=True, blank=True)
 
     def __str__(self):
         return f"{self.name}"
@@ -81,7 +82,11 @@ class Meal(models.Model):
         for i in all_relations:
             total += (int)((i.food_weight/100) * i.food.fiberPer100g)
         return total
-    
+        
+class CountedMeal(models.Model):
+    parentMeal = models.ForeignKey(Meal, on_delete=models.CASCADE)
+    count = models.IntegerField(null=True, blank=True)
+
 class FoodInMeal(models.Model):
     food = models.ForeignKey(Food, on_delete=models.CASCADE)
     meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
