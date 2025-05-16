@@ -1,13 +1,17 @@
 {% extends 'main/potravina-navbar.html' %}
 
 {% block jmeno-potraviny %}
-Jmeno
+{{ food.name }}
+{% endblock %}
+
+{% block title %}
+{{ food.name }} - Detail Potraviny
 {% endblock %}
 
 {% block content %}
     <div class="row text-center align-items-center" style="height: 90vh; width: 100vw;">
         <div class="col-md-4 p-4">
-            <img src="https://placehold.co/400" class=" w-100 shadow-lg" alt="orazek">
+            <img src="{{ food.photo.url }}" class=" w-100 shadow-lg rounded-2" alt="orazek">
         </div>
 
         <div class="col-md-8 p-4">
@@ -17,23 +21,23 @@ Jmeno
                 </div>
                 <div class="list-group-item">
                     <h1 class="m-1 d-flex justify-content-evenly" >
-                        <div class="fs-3" style="flex: 1 1 0;">x kcal</div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ food.kcalPer100g }} kcal</div>
                         <div class="vr"></div>
-                        <div class="fs-3" style="flex: 1 1 0;">x kJ</div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ food.get_kJPer100g }} kJ</div>
                     </h1>
                 </div>
                 <div class="list-group-item">
                     <h1 class="m-1 d-flex justify-content-evenly" style="flex: 1 1 0;">
-                        <div class="fs-3" style="flex: 1 1 0;">xg Bílkovin</div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ food.proteinPer100g }} g Bílkovin</div>
                         <div class="vr"></div>
-                        <div class="fs-3" style="flex: 1 1 0;">xg Sacharidů</div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ food.carbsPer100g }} g Sacharidů</div>
                     </h1>
                 </div>
                 <div class="list-group-item">
                     <h1 class="m-1 d-flex justify-content-evenly" style="flex: 1 1 0;">
-                        <div class="fs-3" style="flex: 1 1 0;">xg Tuků</div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ food.fatPer100g }} g Tuků</div>
                         <div class="vr"></div>
-                        <div class="fs-3" style="flex: 1 1 0;">xg Vlákniny</div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ food.fiberPer100g }} g Vlákniny</div>
                     </h1>
                 </div>
             </div>

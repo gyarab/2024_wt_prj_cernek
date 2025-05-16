@@ -9,7 +9,7 @@ Seznam Potravin
         <div class="card my-3 shadow-lg" style="width: 95vw;">
             <div class="card-body p-2 d-flex align-items-center justify-content-start">
                 <img src="{{ food.photo.url }}" alt="Obrazek jidla" style="height: 8vw; min-height: 50px; max-height: 80px;" class="me-3 rounded-2">
-                <a href="test" class="m-0 h4 flex-grow-1 text-start" style="text-decoration: none; font-size: 3vmin;">{{ food.name }}</a>
+                <a href="{% url 'food_detail' food.id %}" class="m-0 h4 flex-grow-1 text-start" style="text-decoration: none; font-size: 3vmin;">{{ food.name }}</a>
                 <div class="d-none d-md-flex flex-column text-center mx-3" style="font-size: 1.5vmin;">
                     <p class="m-0">{{ food.kcalPer100g }} kcal</p>
                     <p class="m-0">/</p>

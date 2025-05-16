@@ -8,31 +8,63 @@ class Food(models.Model):
     carbsPer100g = models.FloatField(null=True, blank=True)
     fatPer100g = models.FloatField(null=True, blank=True)
     fiberPer100g = models.FloatField(null=True, blank=True)
+    grams_per_teaspoon = models.FloatField(null=True, blank=True)
+    grams_per_tablespoon = models.FloatField(null=True, blank=True)
+    grams_per_piece = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.name}"
     
+    def get_kJPer100g(self):
+        return int(self.kcalPer100g * 4.185)
+    
 class WeightedFood(models.Model):
     weight = models.IntegerField(null=True, blank=True)
     parentFood = models.ForeignKey(Food, on_delete=models.PROTECT)
+    measurement_type = models.CharField(
+        max_length=50,
+        choices=[
+            ('grams', 'Grams'),
+            ('teaspoon', 'Teaspoon'),
+            ('tablespoon', 'Tablespoon'),
+            ('piece', 'Piece')
+        ],
+        default='grams'
+    )
 
     def __str__(self):
-        return f"{self.parentFood} {self.weight}"
+        return f"{self.parentFood} {self.weight} {self.measurement_type}"
     
+    def get_weight_in_grams(self):
+        if self.measurement_type == 'grams':
+            return self.weight
+        elif self.measurement_type == 'teaspoon':
+            return self.weight * self.parentFood.grams_per_teaspoon
+        elif self.measurement_type == 'tablespoon':
+            return self.weight * self.parentFood.grams_per_tablespoon
+        elif self.measurement_type == 'piece':
+            return self.weight * self.parentFood.grams_per_piece
+        return 0
+
     def get_kcal(self):
-        return (int)((self.weight/100) * self.parentFood.kcalPer100g)
+        weight_in_grams = self.get_weight_in_grams()
+        return int((weight_in_grams / 100) * self.parentFood.kcalPer100g)
     
     def get_protein(self):
-        return (int)((self.weight/100) * self.parentFood.proteinPer100g)
+        weight_in_grams = self.get_weight_in_grams()
+        return int((weight_in_grams / 100) * self.parentFood.proteinPer100g)
     
     def get_carbs(self):
-        return (int)((self.weight/100) * self.parentFood.carbsPer100g)
+        weight_in_grams = self.get_weight_in_grams()
+        return int((weight_in_grams / 100) * self.parentFood.carbsPer100g)
     
     def get_fat(self):
-        return (int)((self.weight/100) * self.parentFood.fatPer100g)
+        weight_in_grams = self.get_weight_in_grams()
+        return int((weight_in_grams / 100) * self.parentFood.fatPer100g)
     
     def get_fiber(self):
-        return (int)((self.weight/100) * self.parentFood.fiberPer100g)
+        weight_in_grams = self.get_weight_in_grams()
+        return int((weight_in_grams / 100) * self.parentFood.fiberPer100g)
     
 class Meal(models.Model):
     name = models.CharField(max_length=400)

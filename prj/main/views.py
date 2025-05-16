@@ -9,6 +9,10 @@ def foods(request):
   }
   return render(request, "main/seznam-potravin.html", context)
 
+def food_detail(request, food_id):
+    food = Food.objects.get(id=food_id)
+    return render(request, 'main/detail-potraviny.html', {'food': food})
+
 def weighted_foods(request):
   weighted_foods = WeightedFood.objects.all()
   context = {
