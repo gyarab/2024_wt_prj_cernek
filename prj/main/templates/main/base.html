@@ -46,9 +46,11 @@
               <a class="nav-link active text-light mx-3" href="test">Test</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-          <input class="form-control me-2 bg-success-subtle" type="search" placeholder="Hledat Potravinu" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Hledat</button>
+          <form method="get" class="d-flex" action="seznam-potravin">
+            <div class="input-group">
+              <input class="form-control me-2 bg-success-subtle" type="text" name="search" value="{{ request.GET.search }}" placeholder="Hledat Potravinu" aria-label="Search" aria-describedby="button-addon2">
+              <button class="btn btn-outline-light" type="submit" id="button-addon2">Hledat</button>
+            </div>
           </form>
         </div>
       </div>

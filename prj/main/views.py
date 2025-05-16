@@ -4,6 +4,11 @@ from .models import *
 def foods(request):
   foods = Food.objects.all()
   meals = Meal.objects.all()
+  search = request.GET.get('search')
+  
+  if search:
+    foods = Food.objects.filter(name__icontains=search)
+
   context = {
     "foods": foods,
   }
