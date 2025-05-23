@@ -1,9 +1,9 @@
 [
 {
   "model": "main.food",
-  "pk": 2,
+  "pk": 1,
   "fields": {
-    "name": "Vejce SlepiËÌ",
+    "name": "Vejce Slepiƒç√≠",
     "photo": "images/vejce.jpg",
     "kcalPer100g": 151,
     "proteinPer100g": 12.38,
@@ -14,9 +14,9 @@
 },
 {
   "model": "main.food",
-  "pk": 3,
+  "pk": 2,
   "fields": {
-    "name": "Ku¯ecÌ Prsa Syrov·",
+    "name": "Ku≈ôec√≠ Prsa Syrov√°",
     "photo": "images/kureci_prso.jpg",
     "kcalPer100g": 106,
     "proteinPer100g": 23.1,
@@ -27,9 +27,9 @@
 },
 {
   "model": "main.food",
-  "pk": 4,
+  "pk": 3,
   "fields": {
-    "name": "R˝ûe BÌl· Va¯en·",
+    "name": "R√Ω≈æe B√≠l√° Va≈ôen√°",
     "photo": "images/ryze.jpg",
     "kcalPer100g": 125,
     "proteinPer100g": 2.69,
@@ -40,9 +40,9 @@
 },
 {
   "model": "main.food",
-  "pk": 5,
+  "pk": 4,
   "fields": {
-    "name": "Chleba kmÌnov˝",
+    "name": "Chleba Km√≠nov√Ω",
     "photo": "images/chleba.jpg",
     "kcalPer100g": 244,
     "proteinPer100g": 8.0,
@@ -53,9 +53,9 @@
 },
 {
   "model": "main.food",
-  "pk": 6,
+  "pk": 5,
   "fields": {
-    "name": "M·slo",
+    "name": "M√°slo",
     "photo": "images/maslo.jpg",
     "kcalPer100g": 748,
     "proteinPer100g": 0.7,

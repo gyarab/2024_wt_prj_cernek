@@ -87,6 +87,9 @@ class Meal(models.Model):
             total += (int)((i.food_weight/100) * i.food.kcalPer100g)
         return total
     
+    def get_kJ(self):
+        return int(self.get_kcal() * 4.185)
+    
     def get_protein(self):
         all_relations = FoodInMeal.objects.filter(meal=self)
         total = 0
@@ -123,3 +126,32 @@ class FoodInMeal(models.Model):
     food = models.ForeignKey(Food, on_delete=models.CASCADE)
     meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
     food_weight = models.IntegerField(null=True, blank=True)
+
+class FoodAndMeal(models.Model):
+    food = models.ForeignKey(Food, on_delete=models.CASCADE, null=True, blank=True)
+    meal = models.ForeignKey(Meal, on_delete=models.CASCADE, null=True, blank=True)
+    type = models.CharField(
+        max_length=50,
+        choices=[
+            ('food', 'Food'),
+            ('meal', 'Meal'),
+        ],
+    )
+
+    def get_name(self):
+        if self.type == 'food':
+            return self.food.name
+        elif self.type == 'meal':
+            return self.meal.name
+        
+    def get_photo(self):
+        if self.type == 'food':
+            return self.food.photo
+        elif self.type == 'meal':
+            return self.meal.photo
+    
+    def get_kcalPer100g(self):
+        if self.type == 'food':
+            return self.food.kcalPer100g
+        elif self.type == 'meal':
+            return (int)((self.meal.get_kcal()/self.meal.get_weight()) * 100)

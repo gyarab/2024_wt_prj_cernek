@@ -2,12 +2,16 @@ from django.shortcuts import render
 from .models import *
 
 def foods(request):
-  foods = Food.objects.all()
-  meals = Meal.objects.all()
+  foods = FoodAndMeal.objects.all()
   search = request.GET.get('search')
   
   if search:
-    foods = Food.objects.filter(name__icontains=search)
+    newFoods = []
+    for food in foods:
+      if search.lower() in food.get_name().lower():
+        newFoods.append(food)
+    foods = newFoods
+        
 
   context = {
     "foods": foods,
@@ -15,8 +19,13 @@ def foods(request):
   return render(request, "main/seznam-potravin.html", context)
 
 def food_detail(request, food_id):
-    food = Food.objects.get(id=food_id)
-    return render(request, 'main/detail-potraviny.html', {'food': food})
+    item = FoodAndMeal.objects.get(id=food_id)
+    if item.type == "food":
+        food = Food.objects.get(id=item.food.id)
+        return render(request, 'main/detail-potraviny.html', {'food': food})
+    elif item.type == "meal":
+        meal = Meal.objects.get(id=item.meal.id)
+        return render(request, 'main/detail-jidla.html', {'meal': meal})
 
 def weighted_foods(request):
   weighted_foods = WeightedFood.objects.all()
@@ -24,13 +33,6 @@ def weighted_foods(request):
     "weighted_foods" : weighted_foods,
   }
   return render(request, "main/seznam-potravin-v-souctu.html", context)
-
-def meals(request):
-  meals = Meal.objects.all()
-  context = {
-    "meals" : meals,
-  }
-  return render(request, "main/seznam-jidel.html", context)
 
 def homepage(request):
   weighted_foods = WeightedFood.objects.all()

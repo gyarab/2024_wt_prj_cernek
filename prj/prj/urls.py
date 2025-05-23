@@ -25,10 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
     path('seznam-potravin', views.foods),
-    path('seznam-jidel', views.meals),
     path('potraviny-v-souctu', views.weighted_foods),
     path('kalkulacka-dennich-kalorii',TemplateView.as_view(template_name='main/idealni-kalorie-kalkulacka.html')),
     path('test',TemplateView.as_view(template_name='main/detail-potraviny.html')),
     path('detail-potraviny/<int:food_id>', views.food_detail, name='food_detail'),
+    path('detail-jidla/<int:meal_id>', views.food_detail, name='meal_detail'),
     path('pridani-potraviny',TemplateView.as_view(template_name='main/pridani-potraviny.html')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

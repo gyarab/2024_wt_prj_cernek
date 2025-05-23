@@ -3,7 +3,7 @@
   "model": "main.foodinmeal",
   "pk": 1,
   "fields": {
-    "food": 3,
+    "food": 2,
     "meal": 2,
     "food_weight": 250
   }
@@ -12,7 +12,7 @@
   "model": "main.foodinmeal",
   "pk": 2,
   "fields": {
-    "food": 4,
+    "food": 3,
     "meal": 2,
     "food_weight": 400
   }
@@ -21,7 +21,7 @@
   "model": "main.foodinmeal",
   "pk": 3,
   "fields": {
-    "food": 5,
+    "food": 4,
     "meal": 1,
     "food_weight": 200
   }
@@ -30,7 +30,7 @@
   "model": "main.foodinmeal",
   "pk": 4,
   "fields": {
-    "food": 6,
+    "food": 5,
     "meal": 1,
     "food_weight": 40
   }
@@ -39,7 +39,7 @@
   "model": "main.foodinmeal",
   "pk": 5,
   "fields": {
-    "food": 2,
+    "food": 1,
     "meal": 1,
     "food_weight": 150
   }

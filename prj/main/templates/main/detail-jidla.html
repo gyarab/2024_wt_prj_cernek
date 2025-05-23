@@ -1,0 +1,46 @@
+{% extends 'main/potravina-navbar.html' %}
+
+{% block jmeno-potraviny %}
+{{ meal.name }}
+{% endblock %}
+
+{% block title %}
+{{ meal.name }} - Detail Jidla
+{% endblock %}
+
+{% block content %}
+    <div class="row text-center align-items-center" style="height: 90vh; width: 100vw;">
+        <div class="col-md-4 p-4">
+            <img src="{{ meal.photo.url }}" class=" w-100 shadow-lg rounded-5" alt="orazek">
+        </div>
+
+        <div class="col-md-8 p-4">
+            <div class="list-group rounded-5 shadow-lg">
+                <div class="list-group-item">
+                    <h1>Výživové údaje ({{ meal.get_weight }} g)</h1>
+                </div>
+                <div class="list-group-item">
+                    <h1 class="m-1 d-flex justify-content-evenly" >
+                        <div class="fs-3" style="flex: 1 1 0;">{{ meal.get_kcal }} kcal</div>
+                        <div class="vr"></div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ meal.get_kJ }} kJ</div>
+                    </h1>
+                </div>
+                <div class="list-group-item">
+                    <h1 class="m-1 d-flex justify-content-evenly" style="flex: 1 1 0;">
+                        <div class="fs-3" style="flex: 1 1 0;">{{ meal.get_protein }} g Bílkovin</div>
+                        <div class="vr"></div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ meal.get_carbs }} g Sacharidů</div>
+                    </h1>
+                </div>
+                <div class="list-group-item">
+                    <h1 class="m-1 d-flex justify-content-evenly" style="flex: 1 1 0;">
+                        <div class="fs-3" style="flex: 1 1 0;">{{ meal.get_fat }} g Tuků</div>
+                        <div class="vr"></div>
+                        <div class="fs-3" style="flex: 1 1 0;">{{ meal.get_fiber }} g Vlákniny</div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

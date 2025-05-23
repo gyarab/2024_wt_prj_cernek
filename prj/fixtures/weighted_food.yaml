@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "weight": 250,
-    "parentFood": 3
+    "parentFood": 2
   }
 },
 {
@@ -12,7 +12,7 @@
   "pk": 2,
   "fields": {
     "weight": 200,
-    "parentFood": 2
+    "parentFood": 1
   }
 },
 {
@@ -20,7 +20,7 @@
   "pk": 3,
   "fields": {
     "weight": 100,
-    "parentFood": 5
+    "parentFood": 4
   }
 }
 ]

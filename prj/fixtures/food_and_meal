@@ -1,0 +1,42 @@
+- model: main.foodandmeal
+  pk: 1
+  fields:
+    food: 1
+    meal: null
+    type: food
+- model: main.foodandmeal
+  pk: 2
+  fields:
+    food: 2
+    meal: null
+    type: food
+- model: main.foodandmeal
+  pk: 3
+  fields:
+    food: 3
+    meal: null
+    type: food
+- model: main.foodandmeal
+  pk: 4
+  fields:
+    food: 4
+    meal: null
+    type: food
+- model: main.foodandmeal
+  pk: 5
+  fields:
+    food: 5
+    meal: null
+    type: food
+- model: main.foodandmeal
+  pk: 6
+  fields:
+    food: null
+    meal: 1
+    type: meal
+- model: main.foodandmeal
+  pk: 7
+  fields:
+    food: null
+    meal: 2
+    type: meal
