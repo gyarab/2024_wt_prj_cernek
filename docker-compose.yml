@@ -33,7 +33,7 @@ services:
     labels:
       - "traefik.enable=true"
 
-      - "traefik.http.routers.wt-tc-static-http.rule=Host(`vtc.gawt.dtcloud.cz`) && PathPrefix(`/media`)"
+      - "traefik.http.routers.wt-tc-static-http.rule=Host(`tc.gawt.dtcloud.cz`) && PathPrefix(`/media`)"
       - "traefik.http.routers.wt-tc-static-http.entrypoints=web"
       - "traefik.http.routers.wt-tc-static-http.middlewares=wt-tc-static-redirect-https@docker"
 
