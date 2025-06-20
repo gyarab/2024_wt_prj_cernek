@@ -33,17 +33,17 @@ services:
     labels:
       - "traefik.enable=true"
 
-      - "traefik.http.routers.wt-vch-static-http.rule=Host(`vch.gawt.dtcloud.cz`) && PathPrefix(`/static`)"
-      - "traefik.http.routers.wt-vch-static-http.entrypoints=web"
-      - "traefik.http.routers.wt-vch-static-http.middlewares=wt-vch-static-redirect-https@docker"
+      - "traefik.http.routers.wt-tc-static-http.rule=Host(`vtc.gawt.dtcloud.cz`) && PathPrefix(`/media`)"
+      - "traefik.http.routers.wt-tc-static-http.entrypoints=web"
+      - "traefik.http.routers.wt-tc-static-http.middlewares=wt-tc-static-redirect-https@docker"
 
-      - "traefik.http.middlewares.wt-vch-static-redirect-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.wt-vch-static-redirect-https.redirectscheme.permanent=true"
+      - "traefik.http.middlewares.wt-tc-static-redirect-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.wt-tc-static-redirect-https.redirectscheme.permanent=true"
 
-      - "traefik.http.routers.wt-vch-static-https.rule=Host(`vch.gawt.dtcloud.cz`) && PathPrefix(`/static`)"
-      - "traefik.http.routers.wt-vch-static-https.entrypoints=websecure"
-      - "traefik.http.routers.wt-vch-static-https.tls=true"
-      - "traefik.http.routers.wt-vch-static-https.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.wt-tc-static-https.rule=Host(`tc.gawt.dtcloud.cz`) && PathPrefix(`/media`)"
+      - "traefik.http.routers.wt-tc-static-https.entrypoints=webssecure"
+      - "traefik.http.routers.wt-tc-static-https.tls=true"
+      - "traefik.http.routers.wt-tc-static-https.tls.certresolver=letsencrypt"
 
 networks:
   default:
